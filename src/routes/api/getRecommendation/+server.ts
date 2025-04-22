@@ -57,7 +57,7 @@ async function rateLimitMiddleware(request: Request) {
 		} else {
 			// Check if the user has exceeded the rate limit (5 requests per day)
 			if (count >= 5) {
-				return new Response('Rate limit exceeded, come back tomorrow!', { status: 429 });
+				return new Response('Opa! Tenho um limite de 5 pedidos por dia para não sobrecarregar. :-)', { status: 429 });
 			}
 
 			// Increment the request count for the user
