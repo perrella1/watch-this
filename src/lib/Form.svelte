@@ -19,71 +19,71 @@
 	export let loading;
 
 	const categoryTypes = [
-		'Action',
-		'Adventure',
-		'Animation',
-		'Biography',
-		'Comedy',
-		'Crime',
-		'Documentary',
-		'Drama',
-		'Family',
-		'Fantasy',
-		'Film-Noir',
-		'History',
-		'Horror',
-		'Musical',
-		'Mystery',
-		'Romance',
-		'Sci-Fi',
-		'Sport',
-		'Thriller',
-		'War',
-		'Western',
-		'Art-house',
-		'Black-Comedy',
-		'Chick-flick',
-		'Cult-classic',
-		'Dark-Comedy',
-		'Epic',
-		'Erotic',
-		'Experimental',
-		'Fairy-tale',
-		'Film-within-a-film',
-		'Futuristic',
-		'Gangster',
-		'Heist',
-		'Historical',
-		'Holiday',
-		'Indie',
-		'Juvenile',
-		'Melodrama',
-		'Monster',
-		'Political',
-		'Psychological',
-		'Road-movie',
-		'Satire',
-		'Science-Fiction',
-		'Slapstick',
-		'Social-issue',
-		'Superhero',
-		'Surreal',
-		'Teen',
-		'Vampire',
-		'Zombie'
+		'Ação',
+  'Aventura',
+  'Animação',
+  'Biografia',
+  'Comédia',
+  'Crime',
+  'Documentário',
+  'Drama',
+  'Família',
+  'Fantasia',
+  'Filme Noir',
+  'História',
+  'Terror',
+  'Musical',
+  'Mistério',
+  'Romance',
+  'Ficção Científica',
+  'Esporte',
+  'Suspense',
+  'Guerra',
+  'Faroeste',
+  'Cinema de Arte',
+  'Comédia de Humor Negro',
+  'Comédia Romântica',
+  'Clássico Cult',
+  'Comédia Sombria',
+  'Épico',
+  'Erótico',
+  'Experimental',
+  'Conto de Fadas',
+  'Filme Dentro de um Filme',
+  'Futurista',
+  'Gângster',
+  'Assalto',
+  'Histórico',
+  'Feriado/Festivo',
+  'Independente',
+  'Juvenil',
+  'Melodrama',
+  'Monstro',
+  'Político',
+  'Psicológico',
+  'Filme de Estrada',
+  'Sátira',
+  'Ficção Científica',
+  'Comédia Física (Slapstick)',
+  'Questão Social',
+  'Super-herói',
+  'Surreal',
+  'Adolescente',
+  'Vampiro',
+  'Zumbi'
 	];
 
 	let cinemaTypes = [
-		{ value: 'tv show', title: 'TV Show' },
-		{ value: 'movie', title: 'Movie' },
-		{ value: 'tv show or movie', title: 'No Preference' }
+		{ value: 'tv show', title: 'Série/TV Show' },
+		{ value: 'movie', title: 'Filme' },
+		{ value: 'tv show or movie', title: 'Sem preferência' }
 	];
 </script>
 
 <div class="pt-6 md:pt-10 text-slate-200">
 	<div>
 		<div class="mb-8">
-			<div class="mb-4 font-semibold text-lg">What kind of cinema are you searching for?</div>
+			<div class="mb-4 font-semibold text-lg">Qual tipo está buscando?</div>
 			<div class="flex items-center">
 				{#each cinemaTypes as type (type.value)}
 					<button
@@ -101,7 +101,7 @@
 		</div>
 		<div>
 			<div class="mb-4 font-semibold text-lg">
-				Select all categories that you want the show or movie to include.
+				Selecione as categorias de filmes ou séries que desejar.
 			</div>
 			<div class="flex items-center flex-wrap">
 				{#each categoryTypes as category}
@@ -124,12 +124,13 @@
 		</div>
 		<div class="mt-8">
 			<div class="mb-4 font-semibold text-lg">
-				Write any other specifications here. Be as picky as you'd like.
+				Fique a vontade de escrever qualquer detalhe ou preferência que
+				desejar. Quanto mais específico, melhor!
 			</div>
 			<textarea
 				bind:value={specificDescriptors}
 				class="bg-white/40 border border-white/0 p-2 rounded-md placeholder:text-slate-800 text-slate-900 w-full h-20 font-medium"
-				placeholder="Ex. Must have at least 2 seasons and be on Netflix or Hulu."
+				placeholder="Ex. Ter ao menos 2 temporadas e estar na Netflix. Ou ser um filme de ação com o Tom Cruise."
 			/>
 			<button
 				on:click
@@ -142,7 +143,7 @@
 				{#if loading}
 					<LoadingIndicator />
 				{:else}
-					<p>Curate My List</p>
+					<p>Buscar Filmes</p>
 				{/if}
 			</button>
 		</div>

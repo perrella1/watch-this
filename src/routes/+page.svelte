@@ -28,21 +28,25 @@
 
 	$: {
 		if (searchResponse) {
-			let lastLength = recommendations.length;
-			let x = searchResponse?.split('\n');
-			recommendations = x.map((d, i) => {
-				if ((x.length - 1 > i || endStream) && d !== '') {
-					// @ts-ignore
-					const [, title, description] = d.match(/\d\.\s*(.*?):\s*(.*)/);
-					return { title, description };
-				} else {
-					return d;
-				}
-			});
-			if (recommendations.length > lastLength) {
-				animateScroll.scrollToBottom({ duration: 1500 });
+	let lastLength = recommendations.length;
+	let x = typeof searchResponse === 'string' ? searchResponse.split('\n') : [];
+
+	recommendations = x.map((d, i) => {
+		if ((x.length - 1 > i || endStream) && d !== '') {
+			const match = d.match(/\d\.\s*(.*?):\s*(.*)/);
+			if (match) {
+				const [, title, description] = match;
+				return { title, description };
 			}
 		}
+		return d;
+	});
+
+	if (recommendations.length > lastLength) {
+		animateScroll.scrollToBottom({ duration: 1500 });
+	}
+}
+
 	}
 
 	/**
