@@ -84,15 +84,15 @@
 	<div>
 		<div class="mb-8">
 			<div class="mb-4 font-semibold text-lg">Qual tipo está buscando?</div>
-			<div class="flex items-center">
+			<div class="flex items-center ">
 				{#each cinemaTypes as type (type.value)}
 					<button
 						on:click={() => {
 							cinemaType = type.value;
 						}}
 						class={`${
-							cinemaType === type.value ? 'bg-pink-600/40' : ''
-						} text-slate-200 font-bold mr-2 text-sm mt-2 py-2 px-4 rounded-full border border-pink-600`}
+							cinemaType === type.value ? 'bg-pink-600/40 ' : ''
+						} text-slate-200 font-bold mr-2 text-sm mt-2 py-2 px-4 rounded-full border border-pink-600 hover:bg-sky-600/20 cursor-pointer`}
 					>
 						{type.title}
 					</button>
@@ -108,7 +108,7 @@
 					<label
 						class={`${
 							selectedCategories.includes(category) ? 'bg-pink-600/40' : ''
-						} text-slate-200 font-bold mr-2 mt-2 text-sm py-2 px-4 rounded-full border border-pink-600`}
+						} text-slate-200 font-bold mr-2 mt-2 text-sm py-2 px-4 rounded-full border border-pink-600 hover:bg-sky-600/20 cursor-pointer`}
 					>
 						<input
 							class="hidden"

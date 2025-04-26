@@ -194,13 +194,29 @@
 											</div>
 										{/if}
 									</div>
+									
 								{/if}
 							</div>
 						{/each}
+						<!-- Back to top button-->
+						{#if recommendations.length > 0 && endStream}
+						<div>
+							<button
+								on:click={() => {
+									animateScroll.scrollToTop({ duration: 1000 });
+								}}
+								class="bg-white/20 hover:bg-white/30 mt-4 w-full h-10 text-white font-bold p-3 rounded-full flex items-center justify-center"
+							>
+								Back to Top
+							</button>
+						</div>
+						{/if}
 					{/if}
 				</div>
 			</div>
 		{/if}
+			
+		 
 		<Footer />
 	</div>
 </div>

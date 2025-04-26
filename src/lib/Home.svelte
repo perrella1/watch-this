@@ -10,7 +10,7 @@
 			on:click
 			class="w-full md:w-auto text-center bg-pink-600 hover:bg-pink-700 mb-4 flex-none rounded-full text-white font-medium py-3 px-6 mr-8"
 		>
-			Ver recomendações
+			Ver recomendações com base em IA
 		</button>
 		<a
 			href="https://www.youtube.com/watch?v=Z3LrfdctOpU"
