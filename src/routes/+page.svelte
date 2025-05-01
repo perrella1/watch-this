@@ -166,7 +166,7 @@
 							on:click={clearForm}
 							class="bg-white/20 hover:bg-white/30 mt-4 w-full h-10 text-white font-bold p-3 rounded-full flex items-center justify-center"
 						>
-							Clear Search
+							Limpar Busca
 						</button>
 					{/if}
 				</div>
@@ -207,7 +207,7 @@
 								}}
 								class="bg-white/20 hover:bg-white/30 mt-4 w-full h-10 text-white font-bold p-3 rounded-full flex items-center justify-center"
 							>
-								Back to Top
+								Voltar ao topo
 							</button>
 						</div>
 						{/if}
