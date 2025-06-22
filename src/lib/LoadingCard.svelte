@@ -80,7 +80,7 @@
 </div>
 
 <style>
-	body {
+	:global(body) {
 		font-family: 'Inter', sans-serif;
 	}
 
